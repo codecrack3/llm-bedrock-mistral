@@ -37,14 +37,16 @@ llm -m bedrock-claude "Compare and contrast the leadership styles of Abraham Lin
 
 ## Options
 
-- `max_tokens`, default 8_191: The maximum number of tokens to generate before stopping
-
+- `max_tokens`, default 1024: The maximum number of tokens to generate before stopping
+- `top_p`, default 1: Nucleus sampling, where the model considers the tokens with top_p probability mass
+- `temperature`, default 0.7: Determines the sampling temperature. Higher values like 0.8 increase randomness,
 
 Use like this:
 ```bash
-llm -m bedrock-mistral-7b -o max_tokens 20 "Sing me the alphabet"
- Here is the alphabet song:
+llm -m bedrock-mistral-7b -o max_tokens 200 "Sing me the alphabet"
+ I'd be happy to help you recite the alphabet! Here it is:
 
-A B C D E F G
-H I J
+A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z.
+
+Is there a particular song or melody you'd like me to sing the alphabet to? I can try my best!
 ```
