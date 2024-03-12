@@ -1,0 +1,23 @@
+[project]
+name = "llm-bedrock-mistral"
+version = "0.0.1"
+
+description = "LLM plugin for Mistral on AWS Bedrock"
+readme = "README.md"
+authors = [{name = "Kai Nguyen"}]
+license = {text = "Apache-2.0"}
+classifiers = [
+    "License :: OSI Approved :: Apache Software License"
+]
+
+dependencies = [
+    "llm",
+    "boto3 >=1.34.55",
+    "pydantic >= 2.0"
+]
+
+[project.urls]
+Homepage = "https://github.com/codecrack3/llm-bedrock-mistral.git"
+
+[project.entry-points.llm]
+bedrock_mistral = "llm_bedrock_mistral"
